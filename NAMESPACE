@@ -2,4 +2,5 @@
 
 export(C_to_F)
 export(F_to_C)
+export(g_free)
 export(g_initialize)

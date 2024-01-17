@@ -46,3 +46,16 @@ g_initialize <- function(func_name){
   }
   
 }
+
+#' Closing Function
+#'
+#' This Function should be called only once at the end of the program
+#' @param con The connection to the server.
+#' @return NA
+#' @examples 
+#' g_free(connec)
+#' @export
+g_free <- function(con)
+{
+  RSclose(con)
+}
