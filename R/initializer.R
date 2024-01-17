@@ -9,7 +9,11 @@
 #' @export
 g_initialize <- function(func_name){
   
-  #connec <<- RSconnect(host = "172.15.1.20" , port = 8080)
+  if (!require("RSclient", quietly = TRUE))
+    install.packages("RSclient")
+  library("RSclient")
+  
+  connec <<- RSconnect(host = "172.15.1.20" , port = 8080)
   
   if(length(grep(func_name,pattern = "Gtex_Summary")) != 0 )
   {
