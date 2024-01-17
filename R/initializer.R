@@ -18,6 +18,7 @@ g_initialize <- function(func_name){
   if(length(grep(func_name,pattern = "Gtex_Summary")) != 0 )
   {
     cat("----- Dependencies Of GTEx Summary Functions uploaded ------")
+    RSeval(expr = "source('/home/diptanil/Rcode/gtex/k_gtex_fast_v4.R')" , connec)
   }
   
   if(length(grep(func_name,pattern = "1000GP_LD_Summary")) != 0 )
