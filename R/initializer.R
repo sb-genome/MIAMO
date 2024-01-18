@@ -39,6 +39,7 @@ g_initialize <- function(func_name){
   if(length(grep(func_name,pattern = "Haploreg")) != 0 )
   {
     cat("----- Dependencies Of Haploreg Functions uploaded ------")
+    RSeval(expr = "source('/home/diptanil/Rcode/haploreg_parser/final_codes/haploreg_initializer.R')" , connec)
   }
   
   if(length(grep(func_name,pattern = "Genomic_Regions")) != 0 )
