@@ -3,5 +3,7 @@
 export(C_to_F)
 export(F_to_C)
 export(GTEx_Summary)
+export(Gtex_Sample_Finder)
+export(Gtex_variance_finder)
 export(g_free)
 export(g_initialize)
