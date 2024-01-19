@@ -17,34 +17,39 @@ g_initialize <- function(func_name){
   
   if(length(grep(func_name,pattern = "Gtex_Summary")) != 0 )
   {
-    cat("----- Dependencies Of GTEx Summary Functions uploaded ------")
+    print("----- Dependencies Of GTEx Summary Functions uploaded ------")
     RSeval(expr = "source('/home/diptanil/Rcode/gtex/k_gtex_fast_v4.R')" , connec)
   }
   
   if(length(grep(func_name,pattern = "1000GP_LD_Summary")) != 0 )
   {
-    cat("----- Dependencies Of 1000GP_LD_Summary Functions uploaded ------")
+    print("----- Dependencies Of 1000GP_LD_Summary Functions uploaded ------")
+    RSeval(expr = "source('/home/diptanil/Rcode/LD/codes/calculate_ld.R')" , connec)
   }
   
   if(length(grep(func_name,pattern = "Gtex_LD_Summary")) != 0 )
   {
-    cat("----- Dependencies Of Gtex_LD_Summary Summary Functions uploaded ------")
+    print("----- Comming Soon ------")
   }
   
   if(length(grep(func_name,pattern = "UKBB_BP_Enrichment")) != 0 )
   {
-    cat("----- Dependencies Of UKBB_BP_Enrichment Functions uploaded ------")
+    print("----- Comming Soon ------")
   }
   
   if(length(grep(func_name,pattern = "Haploreg")) != 0 )
   {
-    cat("----- Dependencies Of Haploreg Functions uploaded ------")
-    RSeval(expr = "source('/home/diptanil/Rcode/haploreg_parser/final_codes/haploreg_initializer.R')" , connec)
+    print("----- Dependencies Of Haploreg Functions uploaded ------")
+    RSeval(expr = "source('~/Rcode/hash_functions/codes/rsidToGRCh37.R')" , connec)
+    RSeval(expr = "source('~/Rcode/hash_functions/codes/rsidToGRCh38.R')" , connec)
+    RSeval(expr = "source('~/Rcode/Genomic_Regions/SNP_To_Allele.R')" , connec)
+    
   }
   
   if(length(grep(func_name,pattern = "Genomic_Regions")) != 0 )
   {
-    cat("----- Dependencies Of Genomic_Regions Functions uploaded ------")
+    print("----- Dependencies Of Genomic_Regions Functions uploaded ------")
+    
   }
   
 }
