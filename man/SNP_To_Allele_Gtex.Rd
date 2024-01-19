@@ -4,7 +4,7 @@
 \alias{SNP_To_Allele_Gtex}
 \title{SNP_To_Allele_Gtex Function}
 \usage{
-SNP_To_Allele_Gtex(variant)
+SNP_To_Allele_Gtex(variant_matrix)
 }
 \arguments{
 \item{rsids}{A vector of rsids}
@@ -16,6 +16,6 @@ Summary Statistics of the SNP,Gene and Tissue
 A function in R that retrieves a summary of SNP-gene-tissue associations from the Genotype-Tissue Expression GTEx dataset.
 }
 \examples{
-snpToAF(rsids = "rs10")
-snpToAF(rsids = c("rs10","rs3","rs4","rs10047249"))
+variant_matrix <- data.frame(Chromosome=c("chr1","chr1","chr1","chr1","chr1"), Position=c(13526,13550,14451,14469,14470))
+SNP_To_Allele_Gtex(variant_matrix)
 }

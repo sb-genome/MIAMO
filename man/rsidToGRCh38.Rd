@@ -16,6 +16,6 @@ Summary Statistics of the SNP,Gene and Tissue
 A function in R that retrieves a summary of SNP-gene-tissue associations from the Genotype-Tissue Expression GTEx dataset.
 }
 \examples{
-snpToAF(rsids = "rs10")
-snpToAF(rsids = c("rs10","rs3","rs4","rs10047249"))
+rsidToGRCh38(rsids = "rs10")
+rsidToGRCh38(rsids = c("rs10","rs3","rs4","rs10047249"))
 }

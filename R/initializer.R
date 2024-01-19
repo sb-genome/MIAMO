@@ -40,16 +40,15 @@ g_initialize <- function(func_name){
   if(length(grep(func_name,pattern = "Haploreg")) != 0 )
   {
     print("----- Dependencies Of Haploreg Functions uploaded ------")
-    RSeval(expr = "source('~/Rcode/hash_functions/codes/rsidToGRCh37.R')" , connec)
-    RSeval(expr = "source('~/Rcode/hash_functions/codes/rsidToGRCh38.R')" , connec)
-    RSeval(expr = "source('~/Rcode/Genomic_Regions/SNP_To_Allele.R')" , connec)
-    
+    RSeval(expr = "source('~/Rcode/haploreg_parser/final_codes/haploreg_initializer.R')" , connec)
   }
   
   if(length(grep(func_name,pattern = "Genomic_Regions")) != 0 )
   {
     print("----- Dependencies Of Genomic_Regions Functions uploaded ------")
-    
+    RSeval(expr = "source('~/Rcode/hash_functions/codes/rsidToGRCh37.R')" , connec)
+    RSeval(expr = "source('~/Rcode/hash_functions/codes/rsidToGRCh38.R')" , connec)
+    RSeval(expr = "source('~/Rcode/Genomic_Regions/SNP_To_Allele.R')" , connec)
   }
   
 }
