@@ -16,8 +16,6 @@ rsidToGRCh37 <- function(rsids)
 
 ##################################################################################
 
-
-
 #' rsidToGRCh38 Function
 #'
 #' A function in R that retrieves a summary of SNP-gene-tissue associations from the Genotype-Tissue Expression GTEx dataset.
@@ -72,3 +70,26 @@ SNP_To_Allele_Gtex <- function(variant_matrix)
   ex = paste0("SNP_To_Allele_Gtex(variant_matrix <- data.frame(Chromosome=c('" , Chr ,"') , Position=c(" ,Pos, ")))")
   return(RSeval(expr = ex , c = connec))
 }
+
+##################################################################################
+
+
+#' Lifthg19Tohg38 Function
+#'
+#' Lift-over genomic coordinates from hg19 to hg38 position
+#' @param rsids A vector of Chromosome and a vector of Position beloning to hg19 reference Frame.
+#' @return Summary Statistics of the SNP,Gene and Tissue
+#' @examples
+#' Chromosome <- c(8,8,8,8,8,8,8,8,8,8)
+#' Position <- c(101592213,106973048,108690829,108681675,103044620,104152280,100479917,103144592,108166508,105201080)
+#' Lifthg19Tohg38(Chromosome , Position)
+#' @export
+Lifthg19Tohg38 <- function(Chromosome , Position)
+{
+  Chromosome <- paste0(Chromosome , collapse = ",")
+  Position <- paste0(Position , collapse = ",")
+  ex = paste0("hg19Tohg38(seqnames <- c(" , Chromosome ,") , ranges <- c(" ,Position, "))")
+  return(RSeval(expr = ex , c = connec))
+}
+
+
