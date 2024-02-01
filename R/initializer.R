@@ -5,7 +5,7 @@
 #' @return NA
 #' @examples 
 #' g_initialize("Gtex_Summary");
-#' g_initialize( c("Gtex_Summary", "1000GP_LD_Summary", "Haploreg"));
+#' g_initialize( c("Gtex_Summary", "1000GP_LD_Summary", "Gtex_LD_Summary" , "UKBB_BP_Enrichment" , "Haploreg" , "Genomic_Regions" ));
 #' @export
 g_initialize <- function(func_name){
   
