@@ -1,5 +1,5 @@
-Package: SBGenomeTools
+Package: MIAMO
 Type: Package
-Title: Codes From SB Genome Lab
+Title: Mining and Integrative Analytical Tools for Multi-Omics
 Version: 0.0.1.0
 RoxygenNote: 7.3.0
